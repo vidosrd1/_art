@@ -14,9 +14,9 @@
     <% end %>
   </div>
   <br />
-  <%= form_with(url: tags_path, method: :get,
-  data: {turbo_frame: "tags", turbo_action: "advance"}) do |form| %>
-      <%= form.label :query, "Search by tag name:",
+  <%= form_with(url: blogs_path, method: :get,
+  data: {turbo_frame: "blogs", turbo_action: "advance"}) do |form| %>
+      <%= form.label :query, "Search by blog name:",
       class: "block mb-2" %>
       <div class="flex space-x-3">
         <%= form.text_field :query, class: "py-2 px-4 rounded border ring-0
