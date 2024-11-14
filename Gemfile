@@ -21,7 +21,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'madmin', '~> 1.2', '>= 1.2.11'
-#gem 'pagy', '~> 9.2'
+#gem 'pagy', '~> 9.2', '>= 9.2.2'
 gem 'pagy', '~> 8.6', '>= 8.6.3'
 
 group :development, :test do
