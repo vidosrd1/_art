@@ -502,34 +502,34 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   appraisal
-  bcrypt (~> 3.1, >= 3.1.20)
+  bcrypt
   benchmark-ips
   bootsnap
   brakeman
   capybara
   codecov
-  cssbundling-rails (~> 1.4, >= 1.4.1)
+  cssbundling-rails
   debug
   devise (~> 4.9, >= 4.9.4)
-  ffaker (~> 2.23)
-  friendly_id (~> 5.5, >= 5.5.1)
+  ffaker
+  friendly_id
   i18n
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
   kalibera
   kamal
-  madmin (~> 1.2, >= 1.2.11)
+  madmin
   memory_profiler
   minitest
   minitest-reporters
-  name_of_person (~> 1.1, >= 1.1.3)
+  name_of_person
   oj
-  pagy (~> 8.6, >= 8.6.3)
-  paper_trail (~> 16.0)
-  pg (~> 1.5, >= 1.5.9)
+  pagy
+  paper_trail
+  pg
   propshaft
-  puma (~> 6.4, >= 6.4.3)
+  puma
   rack
   rails (~> 8.0)
   rake-manifest
@@ -549,13 +549,13 @@ DEPENDENCIES
   solid_cable
   solid_cache
   solid_queue
-  standardrb (~> 1.0, >= 1.0.1)
+  standardrb
   stimulus-rails
   tailwindcss-rails
   thruster
   turbo-rails
   tzinfo-data
-  web-console (~> 4.2, >= 4.2.1)
+  web-console
 
 BUNDLED WITH
    2.5.22
