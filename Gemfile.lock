@@ -248,7 +248,7 @@ GEM
       ostruct (>= 0.2)
     orm_adapter (0.5.0)
     ostruct (0.6.1)
-    pagy (8.6.3)
+    pagy (9.2.2)
     paper_trail (16.0.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
