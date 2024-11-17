@@ -77,7 +77,12 @@
       </div>
       <%= link_to "Edit this novine", edit_novine_path(novine) %>
     </div>
-    <br />
     <% end %>
   </div>
+  <% if @pagy.count > @pagy.items %>
+  <div class="mt-10">
+    <%== pagy_nav(@pagy) %>
+  </div>
+  <br />
+  <% end %>
 </div>

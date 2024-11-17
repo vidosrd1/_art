@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :arts
   resources :lists
   get "home/index"
+  get '/privacy', to: 'home#privacy'
+  get '/terms', to: 'home#terms'
   get "up" => "rails/health#show", as: :rails_health_check
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
