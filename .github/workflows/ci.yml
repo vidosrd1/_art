@@ -4,3 +4,13 @@ on:
   pull_request:
   push:
     branches: [ main ]
+    
+jobs:
+  scan_ruby:
+    runs-on: ubuntu-latest
+  scan_js:
+    runs-on: ubuntu-latest
+  lint:
+    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
