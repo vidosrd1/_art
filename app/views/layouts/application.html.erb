@@ -48,6 +48,7 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= render "layouts/dark_mode_check" %>
+    <%= render 'shared/toggle_dark_mode' %>
   </head>
   <header class="1bg-white text-slate-300
   dark:bg-slate-800 dark:text-slate-500
@@ -112,6 +113,5 @@
     </main>
     <hr />
     <%= render 'shared/footer' %>
-    <%= render 'shared/ruby' %>
   </body>
 </html>

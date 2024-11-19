@@ -26,6 +26,8 @@ class NovinesController < ApplicationController
   end
 
   def show
+    #@novine = Novine.find(params[:id])
+    #fresh_when etag: @novine
   end
 
   def new

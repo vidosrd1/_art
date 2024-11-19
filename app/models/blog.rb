@@ -9,4 +9,8 @@ class Blog < ApplicationRecord
   def to_s
     name
   end
+
+  #def to_param
+  #  name.blank? ? id : name
+  #end
 end

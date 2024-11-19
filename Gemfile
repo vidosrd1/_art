@@ -12,7 +12,10 @@ gem "jbuilder"
 gem 'bcrypt'#, '~> 3.1', '>= 3.1.20'
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
-gem "solid_queue"
+gem 'sinatra', '~> 4.1'
+#gem 'sinatra'
+gem 'solid_queue', '~> 1.0', '>= 1.0.2'
+#gem "solid_queue"
 gem "solid_cable"
 gem "bootsnap", require: false
 gem "kamal", require: false
@@ -20,7 +23,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'madmin'#, '~> 1.2', '>= 1.2.11'
-#gem 'pagy', '~> 9.2', '>= 9.2.2'
+#gem 'pagy', '~> 9.3', '>= 9.3.1'
 gem 'pagy'#, '~> 8.6', '>= 8.6.3'
 gem 'cssbundling-rails'#, '~> 1.4', '>= 1.4.1'
 gem "appraisal"
@@ -65,8 +68,10 @@ group :apps do
   #gem 'puma', '~> 6.4', '>= 6.4.3'
   #gem 'puma'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  #gem 'sinatra', '~> 4.1'
+  #gem 'sinatra'
+  gem 'sinatra-contrib', '~> 4.1'
+  #gem 'sinatra-contrib'
   # gem 'slim'
   # gem 'haml'
 end

@@ -1,16 +1,29 @@
 class Novine < ApplicationRecord
   async_pluck
   belongs_to :user
+  belongs_to :author, default: -> { Current.user }
+  has_many   :comments
+
+  has_one_attached :image
+  has_many_attached :pictures
+  has_rich_text :body#, encrypted: true
+  #enum status: %i[ drafted published ]
+  #scope :recent, -> { order(created_at: :desc).limit(25) }
+  #after_save_commit :deliver_later, if: :published?
+
   has_many :bloggables, dependent: :destroy
   has_many :blogs, through: :bloggables
   #has_many :bloggables,
   #through: :blogs, source: :novines
-  has_one_attached :image
-  has_many_attached :pictures, dependent: :destroy
-  #has_many_attached :pictures
-  has_rich_text :body
   accepts_nested_attributes_for :blogs, allow_destroy: true,
    :reject_if => lambda { |n| n[:name].blank? }
+
+  #def byline
+  #  "Written by #{author.name} on #{created_at.to_s(:short)}"
+  #end
+  #def deliver_later
+  #  Novine::DeliveryJob.perform_later(self)
+  #end
 
   def image_as_thumbnail
     return unless image.content_type.in?(%w[image/jpeg image/png image/jpg])
@@ -24,7 +37,4 @@ class Novine < ApplicationRecord
   def pictures_as_thumbnails(novine)
     novine.variant(resize_to_limit: [200, 200]).processed
   end
-  #def to_param
-  #  name.blank? ? id : name
-  #end
 end

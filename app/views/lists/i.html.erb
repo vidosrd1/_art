@@ -1,3 +1,6 @@
+<%= link_to list.name, list_path(@list.id) %>
+
+<% @lists.each do |list| %>
 <br />
 <div class="w-full">
   <% if notice.present? %>
