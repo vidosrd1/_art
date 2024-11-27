@@ -190,9 +190,11 @@ GEM
     loofah (2.23.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    madmin (1.2.11)
+    madmin (2.0.0)
+      importmap-rails
       pagy (>= 3.5)
-      rails (>= 6.0.3)
+      propshaft
+      rails (>= 7.0.0)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
@@ -204,7 +206,7 @@ GEM
     memory_profiler (1.1.0)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    minitest (5.25.1)
+    minitest (5.25.2)
     minitest-reporters (1.7.1)
       ansi
       builder
@@ -265,12 +267,12 @@ GEM
     psych (5.2.0)
       stringio
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.8)
-    rack-protection (4.1.0)
+    rack-protection (4.1.1)
       base64 (>= 0.1.0)
       logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)
@@ -317,7 +319,7 @@ GEM
       ffi (~> 1.0)
     rbs (2.8.4)
     rbzip2 (0.3.0)
-    rdoc (6.8.0)
+    rdoc (6.8.1)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
     reline (0.5.11)
@@ -372,7 +374,7 @@ GEM
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     securerandom (0.3.2)
-    selenium-webdriver (4.26.0)
+    selenium-webdriver (4.27.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -384,18 +386,18 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
-    sinatra (4.1.0)
+    sinatra (4.1.1)
       logger (>= 1.6.0)
       mustermann (~> 3.0)
       rack (>= 3.0.0, < 4)
-      rack-protection (= 4.1.0)
+      rack-protection (= 4.1.1)
       rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-contrib (4.1.0)
+    sinatra-contrib (4.1.1)
       multi_json (>= 0.0.2)
       mustermann (~> 3.0)
-      rack-protection (= 4.1.0)
-      sinatra (= 4.1.0)
+      rack-protection (= 4.1.1)
+      sinatra (= 4.1.1)
       tilt (~> 2.0)
     solargraph (0.50.0)
       backport (~> 1.2)
@@ -521,19 +523,20 @@ DEPENDENCIES
   jbuilder
   kalibera
   kamal
-  madmin
+  madmin (~> 2.0)
   memory_profiler
-  minitest
-  minitest-reporters
+  minitest (~> 5.25, >= 5.25.2)
+  minitest-reporters (~> 1.7, >= 1.7.1)
   name_of_person
   oj
-  pagy
+  pagy (~> 8.6, >= 8.6.3)
   paper_trail
   pg
   propshaft
-  puma
+  puma (~> 6.5)
   rack
   rails (~> 8.0)
+  rake (~> 13.2, >= 13.2.1)
   rake-manifest
   rematch
   rerun
@@ -545,12 +548,13 @@ DEPENDENCIES
   rubocop-rake
   selenium-webdriver
   simplecov
-  sinatra (~> 4.1)
+  sinatra (~> 4.1, >= 4.1.1)
   sinatra-contrib (~> 4.1)
   solargraph
   solid_cable
   solid_cache
   solid_queue (~> 1.0, >= 1.0.2)
+  standard (~> 1.42, >= 1.42.1)
   standardrb
   stimulus-rails
   tailwindcss-rails

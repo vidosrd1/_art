@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :arts
   resources :lists
   get "home/index"
+  get "home/in"
+  get "home/google"
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get "up" => "rails/health#show", as: :rails_health_check

@@ -2,6 +2,8 @@
 <html class="dark">
   <head>
     <title><%= content_for(:title) || "Arts and Lists" %></title>
+<meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+<meta name="google-signin-scope" content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
 <meta charset="utf-8">
 <meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta name="handheldfriendly" content="true">
@@ -48,7 +50,6 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= render "layouts/dark_mode_check" %>
-    <%= render 'shared/toggle_dark_mode' %>
   </head>
   <header class="1bg-white text-slate-300
   dark:bg-slate-800 dark:text-slate-500
@@ -107,7 +108,14 @@
   <body class="h-full font-sans antialiased
   dark:text-slate-300 font-normal leading-normal
   dark:bg-slate-900 dark:text-slate-500
-  bg-gray-50 bg-neutral-100 dark:bg-neutral-900">
+  bg-gray-50 bg-neutral-100 dark:bg-neutral-900
+  dcc-landing color-scheme--light viewport--mobile"
+  template="landing" theme="chrome-theme" type="article" appearance="light" layout="full" ready=""
+  style="--devsite-js-header-height: 49px; --devsite-panel-height: 0px;">
+    <script>
+    const initialTheme = JSON.parse(localStorage.getItem('theme'));
+    document.body.dataset.theme = initialTheme || 'dark';
+    </script>
     <main class="container mx-auto mt-8 px-5 flex">
       <%= yield %>
     </main>

@@ -1,5 +1,5 @@
+# // https://github.com/hotwired/turbo/blob/main/src/core/drive/visit.ts#L56-L60
 # Madmin
-
 ### 🛠 A robust Admin Interface for Ruby on Rails apps
 
 [![Build Status](https://github.com/excid3/madmin/workflows/Tests/badge.svg)](https://github.com/excid3/madmin/actions) [![Gem Version](https://badge.fury.io/rb/madmin.svg)](https://badge.fury.io/rb/madmin)
